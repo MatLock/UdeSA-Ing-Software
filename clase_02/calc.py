@@ -23,6 +23,8 @@ def execute():
   result = ''
   if args.op == '+':
     result = f'{args.first_number} + {args.second_number} = {args.first_number + args.second_number}'
+  if args.op == '*':
+    result = f'{args.first_number} * {args.second_number} = {args.first_number * args.second_number}'
   print(result)
   if args.save:
     save_file(file_path=args.save, result=result)
