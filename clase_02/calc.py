@@ -17,6 +17,13 @@ def div(a, b):
 
 
 '''
+given two numbers 'a' and 'b' returns string with result
+'''
+def sum(a,b):
+  return f'{a} + {b} = {a + b}'
+
+
+'''
 functions that parses cli command and execute operations requested
 '''
 def execute():
