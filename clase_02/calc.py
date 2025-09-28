@@ -10,6 +10,12 @@ def save_file(file_path, result):
 
 
 '''
+given two numbers 'a' and 'b' returns string with result
+'''
+def sum(a,b):
+  return f'{a} + {b} = {a + b}'
+
+'''
 functions that parses cli command and execute operations requested
 '''
 def execute():
@@ -22,7 +28,7 @@ def execute():
   
   result = ''
   if args.op == '+':
-    result = f'{args.first_number} + {args.second_number} = {args.first_number + args.second_number}'
+    result = sum(a=args.first_number, b=args.second_number)
   print(result)
   if args.save:
     save_file(file_path=args.save, result=result)
