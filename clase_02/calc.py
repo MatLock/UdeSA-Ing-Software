@@ -10,11 +10,25 @@ def save_file(file_path, result):
 
 
 '''
+given two numbers 'a' and 'b' returns string with division result
+'''
+def div(a, b):
+  return f'{a} / {b} = {a / b}'
+
+
+'''
+given two numbers 'a' and 'b' returns string with sum result
+'''
+def sum(a,b):
+  return f'{a} + {b} = {a + b}'
+
+
+
+'''
 given two numbers 'a' and 'b' returns string with multiplication result
 '''
 def mul(a, b):
   return f'{a} * {b} = {a * b}'
-
 
 
 '''
@@ -37,6 +51,8 @@ def execute():
     result = f'{args.first_number} + {args.second_number} = {args.first_number + args.second_number}'
   if args.op == '*':
     result = mul(a=args.first_number, b=args.second_number)
+  if args.op == '/':
+    result = div(a=args.first_number, b=args.second_number)
   print(result)
   if args.save:
     save_file(file_path=args.save, result=result)
