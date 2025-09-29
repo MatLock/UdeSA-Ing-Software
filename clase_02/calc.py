@@ -17,10 +17,18 @@ def div(a, b):
 
 
 '''
-given two numbers 'a' and 'b' returns string with result
+given two numbers 'a' and 'b' returns string with sum result
 '''
 def sum(a,b):
   return f'{a} + {b} = {a + b}'
+
+
+
+'''
+given two numbers 'a' and 'b' returns string with multiplication result
+'''
+def mul(a, b):
+  return f'{a} * {b} = {a * b}'
 
 
 '''
@@ -34,9 +42,15 @@ def execute():
   parser.add_argument('--save', help='result file')
   args = parser.parse_args()
   
+
+
+
+
   result = ''
   if args.op == '+':
     result = f'{args.first_number} + {args.second_number} = {args.first_number + args.second_number}'
+  if args.op == '*':
+    result = mul(a=args.first_number, b=args.second_number)
   if args.op == '/':
     result = div(a=args.first_number, b=args.second_number)
   print(result)
