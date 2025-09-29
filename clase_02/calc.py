@@ -31,6 +31,13 @@ def mul(a, b):
   return f'{a} * {b} = {a * b}'
 
 
+
+'''
+given two numbers 'a' and 'b' returns string with substraction result
+'''
+def sub(a, b):
+  return f'{a} - {b} = {a - b}'
+
 '''
 functions that parses cli command and execute operations requested
 '''
@@ -51,6 +58,8 @@ def execute():
     result = mul(a=args.first_number, b=args.second_number)
   if args.op == '/':
     result = div(a=args.first_number, b=args.second_number)
+  if args.op == '-':
+    result = sub(a=args.first_number, b=args.second_number)
   print(result)
   if args.save:
     save_file(file_path=args.save, result=result)
