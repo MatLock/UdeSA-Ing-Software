@@ -53,7 +53,7 @@ def execute():
 
   result = ''
   if args.op == '+':
-    result = f'{args.first_number} + {args.second_number} = {args.first_number + args.second_number}'
+    result = sum(a=args.first_number, b=args.second_number)
   if args.op == '*':
     result = mul(a=args.first_number, b=args.second_number)
   if args.op == '/':
