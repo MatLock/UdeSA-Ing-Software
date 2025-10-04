@@ -6,7 +6,8 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - name: pull code
+      uses: actions/checkout@v4
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -16,4 +17,4 @@ jobs:
         python -m pip install --upgrade pip
         # No hay dependencias específicas para este ejemplo, pero se incluiría aquí
     - name: Run unit tests
-      run: python -m unittest test_app.py
+      run: python3 -m unittest discover
