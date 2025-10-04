@@ -23,11 +23,7 @@ jobs:
         coverage report -m
         coverage xml
     - name: Python Coverage Comment
-      uses: ewjoachim/coverage-comment-action@v1
+      uses: orgoro/coverage@v3.2
       with:
-        GITHUB_TOKEN: ${{ github.token }}
-        COVERAGE_FILE: "coverage.xml"
-        BADGE_ENABLED: "true"
-        BADGE_FILENAME: coverage-comment-badge.json
-        MINIMUM_GREEN: 90
-        MINIMUM_ORANGE: 70
+        token: ${{ github.token }}
+        coverageFile: "coverage.xml"
