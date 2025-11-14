@@ -1,3 +1,5 @@
 venv
 .idea
 *.txt
+.coverage
+*__pycache__

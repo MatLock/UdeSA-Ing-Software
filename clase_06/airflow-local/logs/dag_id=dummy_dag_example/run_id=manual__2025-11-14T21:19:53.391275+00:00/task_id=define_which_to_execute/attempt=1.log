@@ -1,0 +1,31 @@
+[2025-11-14T21:21:39.187+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-14T21:21:39.296+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dummy_dag_example.define_which_to_execute manual__2025-11-14T21:19:53.391275+00:00 [queued]>
+[2025-11-14T21:21:39.336+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dummy_dag_example.define_which_to_execute manual__2025-11-14T21:19:53.391275+00:00 [queued]>
+[2025-11-14T21:21:39.340+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-11-14T21:21:39.407+0000] {taskinstance.py:2888} INFO - Executing <Task(_BranchPythonDecoratedOperator): define_which_to_execute> on 2025-11-14 21:19:53.391275+00:00
+[2025-11-14T21:21:39.438+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=143) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-11-14T21:21:39.446+0000] {standard_task_runner.py:72} INFO - Started process 152 to run task
+[2025-11-14T21:21:39.456+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dummy_dag_example', 'define_which_to_execute', 'manual__2025-11-14T21:19:53.391275+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dummy_dag.py', '--cfg-path', '/tmp/tmpxtedux9d']
+[2025-11-14T21:21:39.466+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask define_which_to_execute
+[2025-11-14T21:21:39.761+0000] {task_command.py:467} INFO - Running <TaskInstance: dummy_dag_example.define_which_to_execute manual__2025-11-14T21:19:53.391275+00:00 [running]> on host 065b7b14e6d9
+[2025-11-14T21:21:40.357+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dummy_dag_example' AIRFLOW_CTX_TASK_ID='define_which_to_execute' AIRFLOW_CTX_EXECUTION_DATE='2025-11-14T21:19:53.391275+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-14T21:19:53.391275+00:00'
+[2025-11-14T21:21:40.364+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-11-14T21:21:40.367+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-11-14T21:21:40.371+0000] {logging_mixin.py:190} INFO - Current task name:define_which_to_execute state:running start_date:2025-11-14 21:21:39.300624+00:00
+[2025-11-14T21:21:40.375+0000] {logging_mixin.py:190} INFO - Dag name:dummy_dag_example and current dag run status:running
+[2025-11-14T21:21:40.380+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-14T21:21:40.388+0000] {python.py:240} INFO - Done. Returned value was: bigger_than_2
+[2025-11-14T21:21:40.393+0000] {branch.py:38} INFO - Branch into bigger_than_2
+[2025-11-14T21:21:40.398+0000] {skipmixin.py:230} INFO - Following branch ('bigger_than_2',)
+[2025-11-14T21:21:40.459+0000] {skipmixin.py:278} INFO - Skipping tasks [('lower_than_2', -1)]
+[2025-11-14T21:21:40.686+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-14T21:21:40.691+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dummy_dag_example, task_id=define_which_to_execute, run_id=manual__2025-11-14T21:19:53.391275+00:00, execution_date=20251114T211953, start_date=20251114T212139, end_date=20251114T212140
+[2025-11-14T21:21:40.791+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-11-14T21:21:40.795+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-11-14T21:21:40.798+0000] {logging_mixin.py:190} INFO - Dag name:dummy_dag_example queued_at:2025-11-14 21:19:53.488668+00:00
+[2025-11-14T21:21:40.802+0000] {logging_mixin.py:190} INFO - Task hostname:065b7b14e6d9 operator:_BranchPythonDecoratedOperator
+[2025-11-14T21:21:40.879+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-14T21:21:41.035+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-14T21:21:41.053+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
