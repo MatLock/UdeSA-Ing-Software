@@ -1,4 +1,4 @@
 coverage==7.10.7
-pydantic
-fastapi
-apache-airflow==2.10.2
+pydantic~=2.12.3
+fastapi~=0.117.1
+apache-airflow~=2.10.2
